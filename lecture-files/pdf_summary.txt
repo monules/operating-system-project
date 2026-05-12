@@ -1,0 +1,915 @@
+=== File: Lab_Session (4).pdf ===
+Content Snippet (first 1000 chars):
+Synchronization Tools in Operating Systems
+Prof. Mehdi Pirahandeh
+1 Introduction
+In this lecture, we will cover the critical concepts of process synchronization,
+which is essential for managing shared resources and ensuring data consis-
+tency when multiple processes are running concurrently. Topics include the
+critical-section problem, race conditions, various synchronization tools like
+semaphores and mutexes, and hardware support for synchronization.
+2 Background
+In a system with multiple processes or threads, managing access to shared
+resources (memory, files, etc.) becomes crucial. Without proper synchro-
+nization, race conditions can occur, leading to incorrect or unpredictable
+outcomes.
+2.1 Race Condition Example
+A race condition occurs when two or more processes attempt to update shared
+data at the same time as shown in Figure 1. For instance, two processes,
+P0 and P1, might both attempt to update a variable ‘next available pid‘.
+Without synchronization, the same ‘pid‘ could be a
+...
+Keywords found: tar
+
+
+=== File: Lab_Session (9).pdf ===
+Content Snippet (first 1000 chars):
+Lecture Note: Synchronization Examples in Operating
+Systems
+Prof. Mehdi Pirahandeh
+1 Introduction
+In operating systems, synchronization is crucial for managing concurrent processes that
+require access to shared resources. Without synchronization, conflicts, data inconsisten-
+cies, and unpredictable behavior may arise. This lecture focuses on classical synchro-
+nization problems like the Bounded-Buffer, Readers-Writers, and Dining-Philosophers
+problems, as well as modern synchronization approaches in Linux, POSIX, and alterna-
+tive programming models.
+2 Classical Problems of Synchronization
+Classical synchronization problems have been used as foundational examples to test and
+validate synchronization solutions. Each problem illustrates a common concurrency chal-
+lenge and highlights the necessity of controlling access to shared resources.
+2.1 Bounded-Buffer Problem (Producer-Consumer)
+The Bounded-Buffer Problem, also known as the Producer-Consumer Problem, demon-
+strates the challenge o
+...
+Keywords found: tar
+
+
+=== File: Lab_Session.pdf ===
+Content Snippet (first 1000 chars):
+Deadlocks in Operating Systems
+Prof. Mehdi Pirahandeh
+Contents
+1 Introduction to Deadlocks 2
+1.1 System Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+2 Deadlock Characterization 2
+3 Resource-Allocation Graph 2
+3.1 Basic Facts about Deadlocks in Graphs . . . . . . . . . . . . . . . . . . . 3
+4 Methods for Handling Deadlocks 3
+5 Deadlock Prevention 3
+5.1 Mutual Exclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+5.2 Hold and Wait . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+5.3 No Preemption . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+5.4 Circular Wait . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+6 Deadlock Avoidance 4
+6.1 Banker’s Algorithm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+7 Deadlock Detection and Recovery 4
+7.1 Detection Algorithm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+7.2 Recovery from Deadlock . . . . . . . . . . . . . .
+...
+Keywords found: tar
+
+
+=== File: Lab_Sessionc.pdf ===
+Content Snippet (first 1000 chars):
+Operating Systems: Lecture and Lab Notes
+Prof. Mehdi Pirahandeh
+Contents
+1 Week 11 Lecture: Main Memory in Operating Systems 2
+1.1 Objectives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.2 Memory Hardware and Access . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.2.1 Memory Protection . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.3 Address Binding . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.4 Code Example: Using Base and Limit Registers . . . . . . . . . . . . . . 3
+1.5 Paging and Fragmentation . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.6 Logical vs Physical Address Space . . . . . . . . . . . . . . . . . . . . . . 3
+1.7 Memory-Management Unit (MMU) . . . . . . . . . . . . . . . . . . . . . 3
+1.8 Paging and Segmentation . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+1.9 Dynamic Loading and Linking . . . . . . . . . . . . . . . . . . . . . . . . 4
+1.9.1 Advantages . . . . . . . . . . . . . . . . . . . .
+...
+Keywords found: log, tar
+
+
+=== File: Lecture_note_CPU Scheduling Concepts and Algorithms.pdf ===
+Content Snippet (first 1000 chars):
+CPU Scheduling Concepts and Algorithms
+Prof. Mehdi Pirahandeh
+1 Introduction to CPU Scheduling
+In operating systems, CPU scheduling determines which processes in the ready queue are
+allocated to the CPU for execution. Scheduling aims to ensure efficient CPU utilization
+and minimize waiting times. Several algorithms exist, each with different benefits and
+drawbacks.
+2 Basic Concepts
+• Multiprogramming: A technique that aims to maximize CPU utilization by
+allowing multiple processes to be executed simultaneously.
+• CPU–I/O Burst Cycle: Processes alternate between CPU execution and I/O
+wait. Efficient scheduling requires an understanding of CPU burst distribution,
+which consists of many short bursts and fewer long ones.
+3 CPU Scheduling Algorithms
+There are various CPU scheduling algorithms, each with its characteristics:
+3.1 First-Come, First-Served (FCFS)
+• Description: Processes are executed in the order they arrive.
+• Advantages: Simple to implement.
+• Disadvantages: Prone to the conv
+...
+Keywords found: schedule, tar
+
+
+=== File: OS_week12_lab.pdf ===
+Content Snippet (first 1000 chars):
+• Save the file with a .sh extension, such as config_mgmt_learning.sh.
+• Make the script executable: chmod +x config_mgmt_learning.sh.
+• Run the script with administrator privileges: sudo ./config_mgmt_learning.sh.
+%%writefile   learning_script.sh
+#!/bin/bash
+# Welcome message
+echo "Welcome to the Command Line Learning Script!"
+sleep 2
+# Function to check user input
+check_command() {
+  while true; do
+    read -p "$1" cmd
+    if eval "$cmd"; then
+      echo "Correct! Moving to the next command."
+      break
+    else
+      echo "That's not correct. Try again."
+    fi
+  done
+}
+# Introduce 'pwd' command
+echo "Let's start with finding out our current directory."
+echo "Type the command that prints the working directory."
+check_command "Your command: "
+# Introduce 'ls' command
+echo "Now, let's list the contents of this directory."
+echo "Type the command that lists the contents."
+check_command "Your command: "
+# Introduce 'cd' command
+echo "Next, we'll change our current directory."
+echo "Type
+...
+Keywords found: log, cron, grep, bash, awk, tar
+
+
+=== File: OSlabs (1).pdf ===
+Content Snippet (first 1000 chars):
+Lab Session: Server Hardening for Ubuntu OS
+Prof. Mehdi Pirahandeh
+October 4, 2023
+Contents
+1 Introduction 2
+2 Prerequisites 3
+3 Setting a BIOS Password 3
+3.1 Objective . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+3.2 Steps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+3.3 Example . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+4 Setting a GRUB Password 4
+4.1 Objective . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+4.2 Steps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+4.3 Example Explanation . . . . . . . . . . . . . . . . . . . . . . . 4
+5 Denying Root Access 5
+5.1 Objective . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+5.2 Steps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+5.3 Example Explanation . . . . . . . . . . . . . . . . . . . . . . . 5
+6 Creating Sudo Users 5
+6.1 Objective . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+6.2 Steps . . . . . . . . .
+...
+Keywords found: log, syslog, tar
+
+
+=== File: OSlabs_w5_summary.pdf ===
+Content Snippet (first 1000 chars):
+Operating System (ISE3137)
+Comprehensive Textbook & Lab Manual
+Mastering OS Concepts, Ubuntu Administration & DevOps
+Prof. Mehdi Pirahandeh
+ISE Department
+School of Global Convergence Studies
+Inha University
+"Jump Together, Fly Farther!"
+This comprehensive manual bridges the gap between theoretical Operating System
+concepts and real-world system administration. It focuses purely on high-level
+conceptual understanding and practical Ubuntu/DevOps workflows, entirely bypassing
+low-level C programming and kernel internals to ensure a clear, process-driven learning
+experience.
+March 29, 2026
+Operating System (ISE3137) Prof. Mehdi Pirahandeh
+Contents
+1 Module 1: Fundamentals of Operating Systems 2
+1.1 What is an Operating System? . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.2 System Services and System Calls (Conceptual) . . . . . . . . . . . . . . . . . . . 2
+2 Module 2: Process Management 3
+2.1 The Concept of a Process . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+...
+Keywords found: log, cron, grep, bash, schedule, tar, backup
+
+
+=== File: Remote Github Notes.pdf ===
+Content Snippet (first 1000 chars):
+Instruction for Pushing Code to a Remote
+GitHub Repository
+September 11, 2023
+Prof. Mehdi Pirahandeh, Inha University
+Introduction
+This document outlines the steps to push your code to a remote GitHub repos-
+itory. The instructions assume that you have Git installed on your computer
+and that you are familiar with basic terminal commands.
+Steps
+1. Navigate to your project folder:
+cd project_folder
+2. Initialize a new Git repository (skip if already initialized):
+git init
+3. Optionally, create a .gitignore file to exclude files and folders
+from being tracked. After creating or modifying .gitignore, you
+may need to untrack already committed files:
+# Create or modify .gitignore
+git rm -r --cached .
+4. Checkout to the desired local branch or create one if it doesn’t
+exist:
+git checkout -b local-branch-name
+1
+5. Add all files to the staging area:
+git add .
+6. Commit the changes:
+git commit -m "Initial commit"
+7. Add your remote repository. Replace your-repository-url with
+the URL of your Git
+...
+
+
+=== File: Shell Scripting Notes.pdf ===
+Content Snippet (first 1000 chars):
+Comprehensive Guidelines on Shell Scripting for
+AI Applications in Ubuntu
+Prof. Mehdi Pirahandeh, Inha University
+September 6, 2023
+Contents
+1 Introduction 2
+2 Prerequisites 2
+3 Creating a Shell Script 2
+3.1 Using a Text Editor . . . . . . . . . . . . . . . . . . . . . . . . . 2
+3.2 The Shebang Line . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+3.3 Making the Script Executable . . . . . . . . . . . . . . . . . . . . 2
+4 Running a Shell Script 2
+4.1 Using bash Command . . . . . . . . . . . . . . . . . . . . . . . . 2
+4.2 Using ./ Syntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+5 Modifying a Shell Script 3
+6 T esting and Debugging 3
+7 Examples of Shell Scripts for AI Applications 3
+7.1 Data Collection . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+7.2 File Manipulation . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+7.3 Data Preprocessing . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+7.4 Running Models . . . . . . . . . . . . . . . . . 
+...
+Keywords found: shell script, cron, bash, automation, tar
+
+
+=== File: Ubuntu Notes.pdf ===
+Content Snippet (first 1000 chars):
+Comprehensive Guidelines on Efficient Ubuntu
+Command Line Usage for File and System
+Operations
+Prof. Mehdi Pirahandeh, Inha University
+September 11, 2023
+Contents
+1 Introduction 1
+2 List of T opics 1
+3 Creating Files and F olders 2
+3.1 Creating an Empty File: touch . . . . . . . . . . . . . . . . . . . 2
+3.2 Creating a New Folder: mkdir . . . . . . . . . . . . . . . . . . . . 2
+4 Navigating Filesystem 2
+4.1 Change Directory: cd . . . . . . . . . . . . . . . . . . . . . . . . 2
+4.2 Print Working Directory: pwd . . . . . . . . . . . . . . . . . . . . 2
+5 File Operations 2
+5.1 Listing Files: ls . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+5.2 Copying Files: cp . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+5.3 Moving Files: mv . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+5.4 Deleting Files: rm . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+6 F older Operations 3
+6.1 Listing Directory Contents: ls . . . . . . . . . . . . . . . . . . . 3
+6.2 Removing 
+...
+Keywords found: grep
+
+
+=== File: Week 10 Lab Material- OS (1).pdf ===
+Content Snippet (first 1000 chars):
+School of Global Convergence Studies 
+Operating System
+(ISE3137)
+Week 10 Lab 
+ISE Department
+Prof. Mehdi Pirahandeh
+School of Global Convergence Studies 
+ANALYZING AND STORING LOGS
+2
+School of Global Convergence Studies 
+ANALYZING AND STORING LOGS
+3
+School of Global Convergence Studies 
+ARCHIVING AND COPYING FILES
+4
+School of Global Convergence Studies 
+ARCHIVING AND COPYING FILES
+5
+School of Global Convergence Studies 
+ARCHIVING AND COPYING FILES
+6
+School of Global Convergence Studies 
+ARCHIVING AND COPYING FILES
+7
+School of Global Convergence Studies 
+ARCHIVING AND COPYING FILES
+8
+School of Global Convergence Studies 
+ARCHIVING AND COPYING FILES
+9
+School of Global Convergence Studies 
+ARCHIVING AND COPYING FILES
+10
+School of Global Convergence Studies 
+ARCHIVING AND COPYING FILES
+11
+School of Global Convergence Studies 
+ARCHIVING AND COPYING FILES
+12
+School of Global Convergence Studies 
+ARCHIVING AND COPYING FILES
+13
+School of Global Convergence Studies 
+ARCHIVING AND COPYING FILES
+
+...
+Keywords found: schedule, log
+
+
+=== File: Week 10 Lecture Material-OS.pdf ===
+Content Snippet (first 1000 chars):
+School of Global Convergence Studies 
+Operating System
+(ISE3137)
+Week 
+10 
+Lecture 
+ISE Department
+Prof. Mehdi Pirahandeh
+Silberschatz, Galvin and Gagne ©2018Operating System Concepts – 10th Edition
+Chapter 8:  Deadlocks
+School of Global Convergence Studies 
+Outline
+• System Model
+• Deadlock Characterization
+• Methods for Handling Deadlocks
+• Deadlock Prevention
+• Deadlock Avoidance
+• Deadlock Detection 
+• Recovery from Deadlock 
+School of Global Convergence Studies 
+System Model
+• System consists of resources
+• Resource types R1, R2, . . ., Rm
+– CPU cycles, memory space
+, I/O devices
+• Each resource type Ri has Wi in
+stances.
+• Each process utilizes a resourc
+e as follows:
+– request 
+– use 
+– release
+4
+School of Global Convergence Studies 
+Deadlock with Semaphores
+• Data:
+– A semaphore S1 initialized to 1
+– A semaphore S2 initialized to 1
+• Two threads T1 and T2
+• T1:  
+wait(s1)
+wait(s2)
+• T2:  
+wait(s2)
+wait(s1)
+Deadlock
+School of Global Convergence Studies 
+Deadlock Characterization
+...
+Keywords found: schedule, tar
+
+
+=== File: Week 11 Lab Material- OS.pdf ===
+Content Snippet (first 1000 chars):
+School of Global Convergence Studies 
+Operating System
+(ISE3137)
+Week 11 Lab 
+ISE Department
+Prof. Mehdi Pirahandeh
+School of Global Convergence Studies 
+ACCESSING LINUX FILE SYSTEMS
+2
+School of Global Convergence Studies 
+ACCESSING LINUX FILE SYSTEMS
+3
+School of Global Convergence Studies 
+ACCESSING LINUX FILE SYSTEMS
+4
+School of Global Convergence Studies 
+ACCESSING LINUX FILE SYSTEMS
+5
+School of Global Convergence Studies 
+ACCESSING LINUX FILE SYSTEMS
+6
+School of Global Convergence Studies 
+ACCESSING LINUX FILE SYSTEMS
+7
+School of Global Convergence Studies 
+ACCESSING LINUX FILE SYSTEMS
+8
+School of Global Convergence Studies 
+Mounting and Unmounting File Systems
+9
+School of Global Convergence Studies 
+Mounting and Unmounting File Systems
+10
+School of Global Convergence Studies 
+Mounting and Unmounting File Systems
+11
+School of Global Convergence Studies 
+Mounting and Unmounting File Systems
+12
+School of Global Convergence Studies 
+Brief break (if on schedule)
+Q&A?
+Prof. Mehdi Piraha
+...
+Keywords found: schedule
+
+
+=== File: Week 11 Lecture Material-OS.pdf ===
+Content Snippet (first 1000 chars):
+School of Global Convergence Studies 
+Operating System
+(ISE3137)
+Week 
+11 
+Lecture 
+ISE Department
+Prof. Mehdi Pirahandeh
+Silberschatz, Galvin and Gagne ©2018Operating System Concepts – 10th Edition
+Chapter 9:  Main Memory
+School of Global Convergence Studies 
+Objectives
+• To provide a detailed description of various ways of organizing memor
+y hardware
+• To discuss various memory-management techniques, 
+• To provide a detailed description of the Intel Pentium, which supports 
+both pure segmentation and segmentation with paging
+School of Global Convergence Studies 
+Background
+• Program must be brought (from disk)  into memory and placed within 
+a process for it to be run
+• Main memory and registers are only storage CPU can access directly
+• Memory unit only sees a stream of:
+– addresses + read requests, or 
+– address + data and write requests
+• Register access is done in one CPU clock (or less)
+• Main memory can take many cycles, causing a stall
+• Cache sits between main memory and CPU 
+...
+Keywords found: schedule, log, tar
+
+
+=== File: Week 12 Lecture Material-OS.pdf ===
+Content Snippet (first 1000 chars):
+School of Global Convergence Studies 
+Operating System
+(ISE3137)
+Week 12 Lecture 
+ISE Department
+Prof. Mehdi Pirahandeh
+Silberschatz, Galvin and Gagne ©2018Operating System Concepts – 10th Edition
+Chapter 10:  Virtual Memory
+School of Global Convergence Studies 
+Objectives
+• Define virtual memory and describe its benefits.
+• Illustrate how pages are loaded into memory using demand paging.
+• Apply the FIFO, optimal, and  LRU page-replacement algorithms.
+• Describe the working set of a process, and explain how it is related to progra
+m locality.
+• Describe how Linux manages virtual memory.
+• Design a virtual memory manager simulation in the C programming languag
+e.
+School of Global Convergence Studies 
+Background
+• Code needs to be in memory to execute, but the entire program 
+is rarely used
+• Entire program code not needed at the same time
+• Consider the ability to execute the partially-loaded program
+– Program no longer constrained by limits of physical memory
+– Each program takes less
+...
+Keywords found: schedule, log, tar
+
+
+=== File: Week 3 Lab Material.pdf ===
+Content Snippet (first 1000 chars):
+School of Global Convergence Studies 
+Operating System
+(ISE3137)
+Week 3 
+Lab 
+ISE Department
+Prof. Mehdi Pirahandeh
+School of Global Convergence Studies 
+LINUX FILE SYSTEM HIERARCHY
+2
+School of Global Convergence Studies 
+LINUX FILE SYSTEM HIERARCHY
+3
+School of Global Convergence Studies 
+LINUX FILE SYSTEM HIERARCHY
+The following table 
+lists some of the mo
+st important directo
+ries on the system b
+y name and purpose
+.
+4
+School of Global Convergence Studies 
+FILE MAGEMENT
+5
+School of Global Convergence Studies 
+FILE MAGEMENT
+6
+School of Global Convergence Studies 
+FILE MAGEMENT
+7
+School of Global Convergence Studies 
+FILE MAGEMENT
+8
+School of Global Convergence Studies 
+FILE MAGEMENT
+9
+School of Global Convergence Studies 
+FILE MAGEMENT
+10
+School of Global Convergence Studies 
+FILE MAGEMENT
+11
+School of Global Convergence Studies 
+FILE MAGEMENT
+12
+School of Global Convergence Studies 
+FILE MAGEMENT
+13
+School of Global Convergence Studies 
+Brief break (if on schedule)
+Q&A?
+Prof. Mehdi P
+...
+Keywords found: schedule
+
+
+=== File: Week 3 Lecture Material -OS.pdf ===
+Content Snippet (first 1000 chars):
+School of Global Convergence Studies 
+Operating System
+(ISE3137)
+Week 
+3 
+Lecture 
+ISE Department
+Prof. Mehdi Pirahandeh
+Silberschatz, Galvin and Gagne © 2018Operating System Concepts – 10th Edition
+Chapter 2:  Operating-System Services
+School of Global Convergence Studies 
+Outline
+• Operating System Services
+• User and Operating System-Interface
+• System Calls
+• System Services
+• Linkers and Loaders
+• Why Applications are Operating System Specific
+• Design and Implementation
+• Operating System Structure
+• Building and Booting an Operating System
+• Operating System Debugging
+School of Global Convergence Studies 
+Objectives
+• Identify services provided by an operating system
+• Illustrate how system calls are used to provide oper
+ating system services
+• Compare and contrast monolithic, layered, microke
+rnel, modular, and hybrid strategies for designing o
+perating systems
+• Illustrate the process for booting an operating syste
+m
+• Apply tools for monitoring operating system perfor
+mance
+•
+...
+Keywords found: shell script, schedule, log, tar
+
+
+=== File: Week 4 Lecture Material-OS.pdf ===
+Content Snippet (first 1000 chars):
+School of Global Convergence Studies 
+Operating System
+(ISE3137)
+Week 
+4 
+Lecture 
+ISE Department
+Prof. Mehdi Pirahandeh
+Silberschatz, Galvin and Gagne © 2018Operating System Concepts – 10th Edition
+Chapter 3:  Processes
+School of Global Convergence Studies 
+Outline
+• Process Concept
+• Process Scheduling
+• Operations on Processes
+• Interprocess Communication
+• IPC in Shared-Memory Systems
+• IPC in Message-Passing Systems
+• Examples of IPC Systems
+• Communication in Client-Server Systems
+School of Global Convergence Studies 
+Objectives
+• Identify the separate components of a process and illustrate how they a
+re represented and scheduled in an operating system.
+• Describe how processes are created and terminated in an operating sys
+tem, including developing programs using the appropriate system calls 
+that perform these operations.
+• Describe and contrast interprocess communication using shared memo
+ry and message passing.
+• Design programs that uses pipes and POSIX shared memory to perf
+...
+Keywords found: schedule, log, tar
+
+
+=== File: Week 5 Lecture Material-OS.pdf ===
+Content Snippet (first 1000 chars):
+School of Global Convergence Studies 
+Operating System
+(ISE3137)
+Week 
+5 
+Lecture 
+ISE Department
+Prof. Mehdi Pirahandeh
+Silberschatz, Galvin and Gagne © 2018Operating System Concepts – 10th Edition
+Chapter 4:  
+Threads & Concurrency 
+School of Global Convergence Studies 
+Outline
+• Overview
+• Multicore Programming
+• Multithreading Models
+• Thread Libraries
+• Implicit Threading
+• Threading Issues
+• Operating System Examples
+School of Global Convergence Studies 
+Objectives
+• Identify the basic components of a thread, and contrast threads 
+and processes
+• Describe the benefits and challenges of designng multithreade
+d applications
+• Illustrate different approaches to implicit threading including t
+hread pools, fork-join, and Grand Central Dispatch
+• Describe how the Windows and Linux operating systems repre
+sent threads
+• Designing multithreaded applications using the Pthreads, Java, 
+and Windows threading APIs
+School of Global Convergence Studies 
+Motivation
+• Most modern applications ar
+...
+Keywords found: schedule, log, tar
+
+
+=== File: Week 6 Lab Material.pdf ===
+Content Snippet (first 1000 chars):
+School of Global Convergence Studies 
+Operating System
+(ISE3137)
+Week 
+6 Lab 
+ISE Department
+Prof. Mehdi Pirahandeh
+School of Global Convergence Studies 
+Examples of simple commands
+• The date command is used to display the current date and 
+time. It can also be used by the
+• superuser to set the system clock. An argument that begins 
+with a plus sign (+) specifies a
+• format string for the date command.
+School of Global Convergence Studies 
+Examples of simple commands
+• The date command is used to display the current date and 
+time. It can also be used by the
+• superuser to set the system clock. An argument that begins 
+with a plus sign (+) specifies a
+• format string for the date command.
+ubuntu@instance-20230321-1112:~$ date
+Wed Apr  5 06:52:20 UTC 2023
+ubuntu@instance-20230321-1112:~$ date +%R
+06:53
+ubuntu@instance-20230321-1112:~$ date +"%m-%d-%y"
+04-05-23
+ubuntu@instance-20230321-1112:~$ date +"%D"
+04/05/23
+ubuntu@instance-20230321-1112:~$ date +"%T"
+07:14:10
+ubuntu@instance-2023
+...
+Keywords found: schedule, log, bash
+
+
+=== File: Week 6 Lecture Material-OS.pdf ===
+Content Snippet (first 1000 chars):
+School of Global Convergence Studies 
+Operating System
+(ISE3137)
+Week 
+6 
+Lecture 
+ISE Department
+Prof. Mehdi Pirahandeh
+Silberschatz, Galvin and Gagne © 2018Operating System Concepts – 10th Edition
+Chapter 5:  CPU Scheduling
+School of Global Convergence Studies 
+Outline
+• Basic Concepts
+• Scheduling Criteria 
+• Scheduling Algorithms
+• Thread Scheduling
+• Multi-Processor Scheduling
+• Real-Time CPU Scheduling
+• Operating Systems Examples
+• Algorithm Evaluation
+School of Global Convergence Studies 
+Basic Concepts
+• Maximum CPU utilization obtain
+ed with multiprogramming
+• CPU–I/O Burst Cycle – Process e
+xecution consists of a cycle of C
+PU execution and I/O wait
+• CPU burst followed by I/O bur
+st
+• CPU burst distribution is of main 
+concern
+School of Global Convergence Studies 
+Histogram of CPU-burst Times
+Large number of short bursts
+Small number of longer bursts
+School of Global Convergence Studies 
+CPU Scheduler
+• The CPU scheduler selects from among the processes in ready 
+queue, and
+...
+Keywords found: schedule, log, tar
+
+
+=== File: Week 7 Lecture Material-OS.pdf ===
+Content Snippet (first 1000 chars):
+School of Global Convergence Studies 
+Operating System
+(ISE3137)
+Week 
+7 
+Lecture 
+ISE Department
+Prof. Mehdi Pirahandeh
+Silberschatz, Galvin and Gagne © 2018Operating System Concepts – 10th Edition
+Chapter 6:  Synchronization To
+ols
+School of Global Convergence Studies 
+Outline
+• Background
+• The Critical-Section Problem
+• Peterson’s Solution
+• Hardware Support for Synchronization
+• Mutex Locks
+• Semaphores
+• Monitors
+• Liveness
+• Evaluation
+School of Global Convergence Studies 
+Race Condition
+• Processes P0 and P1 are creating child processes using the fork() system call
+• Race condition on kernel variable next_available_pid which represents t
+he next available process identifier (pid)
+• Unless there is a mechanism to prevent P0 and P1 from accessing  the variable n
+ext_available_pid the same pid could be assigned to two different proce
+sses!
+School of Global Convergence Studies 
+Critical Section Problem
+• Consider system of n processes {p0, p1, … pn-1}
+• Each process has critical se
+...
+Keywords found: schedule, tar
+
+
+=== File: Week 9 Lecture Material-OS.pdf ===
+Content Snippet (first 1000 chars):
+School of Global Convergence Studies 
+Operating System
+(ISE3137)
+Week 
+9 
+Lecture 
+ISE Department
+Prof. Mehdi Pirahandeh
+Silberschatz, Galvin and Gagne ©2018Operating System Concepts – 10th Edition
+Chapter 7:  Synchronization Examples
+School of Global Convergence Studies 
+Classical Problems of Synchronization
+• Classical problems used to test newly-proposed synchronizat
+ion schemes
+– Bounded-Buffer Problem
+– Readers and Writers Problem
+– Dining-Philosophers Problem
+School of Global Convergence Studies 
+Bounded-Buffer Problem
+• n buffers, each can hold one item
+• Semaphore mutex initialized to the value 1
+• Semaphore full initialized to the value 0
+• Semaphore empty initialized to the value n
+School of Global Convergence Studies 
+Bounded Buffer Problem (Cont.)
+School of Global Convergence Studies 
+Bounded Buffer Problem (Cont.)
+• Reference link
+School of Global Convergence Studies 
+Readers-Writers Problem
+• A data set is shared among a number of concurrent processes
+– Readers – only rea
+...
+Keywords found: schedule, tar
+
+
+=== File: Week_5_OS_Lab_Session.pdf ===
+Content Snippet (first 1000 chars):
+ Instructor: Prof. Mehdi Pirahandeh
+Operating System
+2023Inha University, ISE Department 1
+Laboratory Session: Server Health Checkup
+Server Health Checkup
+2023Inha University, ISE Department2
+ Regularly monitor the server's health to ensure optimal 
+performance.
+ Use diagnostic tools to identify bottlenecks
+ Check for hardware issues
+ Monitor network latency.
+ Ensure backup systems are functional.
+Server Health Checkup
+ Regularly monitor the server's health to ensure optimal 
+performance.
+ Use diagnostic tools to identify issues.
+ Schedule regular maintenance checks.
+2023Inha University, ISE Department3
+CPU Utilization
+ Monitor CPU utilization of critical processes like 'java', 
+'http', 'mysql', etc.
+ Set up alerts for high CPU usage.
+ Coordinate with the application team for fine-tuning.
+2023Inha University, ISE Department4
+Zombie Processes
+ Check for processes where the PID still exists in the 
+process table after termination.
+ Zombie processes can degrade server perfor
+...
+Keywords found: shell script, grep, bash, awk, schedule, backup
+
+
+=== File: lecture_summary_w1w2w3w4.pdf ===
+Content Snippet (first 1000 chars):
+Lecture Notes: Introduction to Operating
+Systems
+Prof. Mehdi Pirahandeh
+September 26, 2025
+Contents
+1 Introduction 3
+2 Computer System Structure 4
+2.1 What Operating Systems Do . . . . . . . . . . . . . . . . . . . 5
+2.2 Key OS Functions . . . . . . . . . . . . . . . . . . . . . . . . . 6
+2.3 Operating System Services . . . . . . . . . . . . . . . . . . . . 8
+2.3.1 User-Oriented Services . . . . . . . . . . . . . . . . . . 8
+2.3.2 System-Oriented Services . . . . . . . . . . . . . . . . . 9
+2.4 User and OS Interface . . . . . . . . . . . . . . . . . . . . . . 10
+2.5 System Calls . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+2.5.1 Examples of System Calls . . . . . . . . . . . . . . . . 10
+2.5.2 Formula: Average System Call Time . . . . . . . . . . 10
+2.6 System Services . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+2.7 Linkers and Loaders . . . . . . . . . . . . . . . . . . . . . . . 11
+2.7.1 Linker . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+2.7.2 Lo
+...
+Keywords found: schedule, log, tar, backup
+
+
