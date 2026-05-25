@@ -1,16 +1,18 @@
 #!/bin/bash
 # init_aegis.sh - Foundation for Project A.E.G.I.S.
 
-BASE_DIR="./aegis"
+# Robust path finding
+SRC_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BASE_DIR="$(dirname "$SRC_DIR")"
 LOG_DIR="$BASE_DIR/logs"
 DATA_DIR="$BASE_DIR/data"
 BACKUP_DIR="$BASE_DIR/backups"
-SRC_DIR="$BASE_DIR/src"
 
 # Create Directory Structure
-mkdir -p "$LOG_DIR" "$DATA_DIR" "$BACKUP_DIR" "$SRC_DIR"
+mkdir -p "$LOG_DIR" "$DATA_DIR" "$BACKUP_DIR"
 
-# Initialize Shared State JSON
+# Initialize Shared State JSON if it doesn't exist
+if [ ! -f "$DATA_DIR/system_status.json" ]; then
 cat <<EON > "$DATA_DIR/system_status.json"
 {
     "security_level": "NORMAL",
@@ -24,8 +26,9 @@ cat <<EON > "$DATA_DIR/system_status.json"
     }
 }
 EON
+fi
 
 # Initialize Global Event Log
 touch "$LOG_DIR/aegis_events.log"
 
-echo "Project A.E.G.I.S. Infrastructure Initialized."
+echo "Project A.E.G.I.S. Infrastructure Initialized at $BASE_DIR"

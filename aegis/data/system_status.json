@@ -1,8 +1,8 @@
 {
-    "security_level": "NORMAL",
-    "lockdown_active": false,
-    "last_backup": "backup_20260512_174851.tar.gz",
-    "active_threats": 0,
+    "security_level": "CRITICAL",
+    "lockdown_active": true,
+    "last_backup": "None",
+    "active_threats": 1,
     "deadlock_status": "SAFE",
     "resource_usage": {
         "cpu": 0,

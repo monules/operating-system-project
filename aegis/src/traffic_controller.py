@@ -2,7 +2,9 @@ import json
 import os
 import time
 
-BASE_DIR = "./aegis"
+# Robust path finding
+SRC_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(SRC_DIR)
 DATA_DIR = os.path.join(BASE_DIR, "data")
 STATUS_FILE = os.path.join(DATA_DIR, "system_status.json")
 LOG_FILE = os.path.join(BASE_DIR, "logs/aegis_events.log")
@@ -39,12 +41,14 @@ def run_simulation():
     safe, sequence = banker.is_safe()
     status = "SAFE" if safe else "UNSAFE"
     log_traffic(f"System State: {status}. Sequence: {sequence}")
-    with open(STATUS_FILE, "r+") as f:
-        data = json.load(f)
-        data["deadlock_status"] = status
-        f.seek(0)
-        json.dump(data, f, indent=4)
-        f.truncate()
+    
+    if os.path.exists(STATUS_FILE):
+        with open(STATUS_FILE, "r+") as f:
+            data = json.load(f)
+            data["deadlock_status"] = status
+            f.seek(0)
+            json.dump(data, f, indent=4)
+            f.truncate()
 
 if __name__ == "__main__":
     run_simulation()
